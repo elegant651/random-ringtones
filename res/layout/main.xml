@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 	xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:orientation="vertical"
+			    android:background="@drawable/background"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:padding="10px">	    
+	<TabHost
+	    android:id="@+id/thMain"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+	    
+	    <TabWidget 
+	        android:id="@android:id/tabs"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone"
+	        android:layout_gravity="bottom">
+	    </TabWidget>
+	    
+	    <FrameLayout
+	        android:id="@android:id/tabcontent"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:paddingBottom="65dp">
+	        
+	        <!-- 1st TAB_play  -->
+	        <LinearLayout
+		        android:id="@+id/llPlay"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:orientation="vertical">	
+		        <LinearLayout
+		            android:id="@+id/llTop_tab1"		            
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:visibility="invisible"		            		            
+		            android:orientation="horizontal"
+		            >
+		            <Button 
+		                android:id="@+id/btnMakeRingtones"
+		                android:background="@drawable/btn_save"							                		                
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"/>
+		            <Button 
+		                android:id="@+id/btnShare"
+		                android:background="@drawable/btn_share"
+		                android:layout_marginLeft="15dp"	                                            
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"/>
+		        </LinearLayout>
+		        <RelativeLayout 
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">		           
+		            <RelativeLayout 
+				    	android:id="@+id/llLoad"
+			    		android:layout_width="wrap_content"
+			    		android:layout_height="260dp"
+			    		android:gravity="center" />
+		             <ImageView 
+		                android:id="@+id/imgLikeButton"
+		                android:src="@drawable/btn_like"
+		                android:visibility="gone"
+		                android:layout_width="wrap_content"
+		                android:layout_height="80dp"		 
+		                android:layout_marginLeft="-40dp"               		
+		                android:layout_alignParentLeft="true"
+		                android:layout_centerVertical="true"                	                
+		                android:layout_gravity="center"
+		                />
+		            <ImageView
+		                android:id="@+id/imgNextButton"
+		                android:src="@drawable/btn_next"
+		                android:visibility="gone"
+		         		android:layout_width="wrap_content"
+		         		android:layout_height="80dp"	
+		         		android:layout_marginRight="-40dp"	
+		         		android:layout_alignParentRight="true"
+		         		android:layout_centerVertical="true"         		
+		         		android:layout_gravity="center" />
+		        </RelativeLayout>	        
+				       
+		        
+				<RelativeLayout 
+				    android:id="@+id/rlSongInfo"
+				    android:layout_width="220dp"
+				    android:layout_height="70dp"
+				    android:layout_gravity="center"				    
+				    android:background="@drawable/bar_push"
+				    android:orientation="vertical">
+		            <ImageView
+		                android:id="@+id/imgPushthis"
+		                android:src="@drawable/txt_push"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="center" />
+		             <LinearLayout 
+		                 android:id="@+id/llDetailText"
+		                 android:visibility="invisible"
+		                 android:layout_width="fill_parent"
+		                 android:layout_height="wrap_content"
+		                 android:layout_margin="10dp"
+		                 android:orientation="vertical">
+		                 <LinearLayout android:layout_width="fill_parent"
+			                android:layout_height="wrap_content"
+			                android:orientation="horizontal">
+			                <ImageView android:src="@drawable/icon_songname"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:layout_marginRight="10dp" />
+			                <TextView android:id="@+id/tvSongName"
+						        android:text="NoName"
+						        android:textColor="#FFFF00"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"/>		                
+			            </LinearLayout>	
+			             <LinearLayout android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_marginTop="5dp"
+		                    android:orientation="horizontal">		                  	
+			                <ImageView android:src="@drawable/icon_down"
+			                   android:layout_width="wrap_content"
+			                   android:layout_height="wrap_content"
+			                   android:layout_marginRight="5dp" />
+					        <TextView android:id="@+id/tvDownNum"
+					            android:text="113"
+					            android:textColor="#FFFF00"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"/>
+					        <ImageView android:src="@drawable/icon_favorite"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_marginLeft="20dp"
+					            android:layout_marginRight="5dp"/>
+					        <TextView android:id="@+id/tvLike"
+					            android:text="100"
+					            android:textColor="#FFFF00"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content" />		
+					        <ImageView android:src="@drawable/icon_share"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:layout_marginLeft="20dp"
+					            android:layout_marginRight="5dp"/>
+					        <TextView android:id="@+id/tvShare"
+					            android:text="14"
+					            android:textColor="#FFFF00"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content" />	                    
+		                </LinearLayout>		                			            	                 
+		             </LinearLayout>			 
+				</RelativeLayout>
+				<RelativeLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="50dp"
+				    android:layout_marginTop="10dp">
+				    <net.daum.adam.publisher.AdView
+					    android:id="@+id/adview"
+					    android:visibility="invisible"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"				    
+					    clientId="3873Z8HT1396c24c0ad"
+					    requestInterval="60"/>
+				</RelativeLayout>					   		    
+			</LinearLayout>
+		   
+	        	<!--  2nd TAB_ranking -->
+	        <LinearLayout 
+	            android:id="@+id/llRanking"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:orientation="vertical">
+				<LinearLayout 
+				    android:layout_width="fill_parent"
+				    android:layout_height="60dp"
+				    android:padding="5dp"
+				    android:orientation="horizontal">				
+				    <ImageView 
+				        android:src="@drawable/txt_rankingview"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginRight="20dp"/>    		    
+				    <Button
+				        android:id="@+id/btnPopulRingtone"
+				        android:background="@drawable/txt_mostsaved"		        
+				        android:layout_width="63dp"
+				        android:layout_height="40dp"
+				         />	
+				    <Button
+				        android:id="@+id/btnPopulFavolite"				        
+				        android:background="@drawable/txt_mostliked"			        
+				        android:layout_width="63dp"
+				        android:layout_height="40dp" />					    
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="320dp"				    
+				    android:orientation="vertical">
+				    <ListView android:id="@+id/lvRanklist"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent" 
+	                android:scrollingCache="false"/>
+				</LinearLayout>	       
+				<RelativeLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="50dp"
+				    >
+				    <net.daum.adam.publisher.AdView
+					    android:id="@+id/adview2"
+					    android:visibility="invisible"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"				    
+					    clientId="3873Z8HT1396c24c0ad"
+					    requestInterval="60"/>
+				</RelativeLayout>     
+	        </LinearLayout>
+	                
+	        	<!-- 3rd TAB_mybox -->
+	        <LinearLayout
+	            android:id="@+id/llMybox"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:orientation="vertical">
+	            <LinearLayout 
+				    android:layout_width="fill_parent"
+				    android:layout_height="60dp"
+				    android:padding="5dp"
+				    android:orientation="horizontal">		
+				    <ImageView 
+				        android:src="@drawable/txt_favoriteview"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginRight="20dp"/> 		    
+				    <Button
+				        android:id="@+id/btnMyboxRingtone"
+				        android:background="@drawable/txt_liked"				        
+				        android:layout_width="63dp"
+				        android:layout_height="36dp" 
+				        />
+				    <Button
+				        android:id="@+id/btnMyboxFavolite"
+				        android:background="@drawable/txt_saved"				        
+				        android:layout_width="63dp"
+				        android:layout_height="36dp" />
+				</LinearLayout>
+	            <LinearLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="320dp"				    
+				    android:orientation="vertical">
+				    <ListView android:id="@+id/lvMyboxlist"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:scrollingCache="false" />
+				</LinearLayout>	   
+				<RelativeLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="50dp"
+				   >
+				    <net.daum.adam.publisher.AdView
+					    android:id="@+id/adview3"
+					    android:visibility="invisible"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"				    
+					    clientId="3873Z8HT1396c24c0ad"
+					    requestInterval="60"/>
+				</RelativeLayout>     
+	        </LinearLayout>
+	    </FrameLayout>     
+	    
+	</TabHost>          
+    
+</LinearLayout>
